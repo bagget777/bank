@@ -5,19 +5,19 @@ import secrets
 # Create your models here.
 class Username(AbstractUser):
     email = models.EmailField(
-        verbose_name="Твоя почта",
+        verbose_name="Ваша почта",
         unique=True
     )
     phone_number = models.CharField(
         max_length=255,
-        verbose_name="Твой номер телефона"
+        verbose_name="Ваш номер телефона"
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="Дата создания"
+        verbose_name="дата создания"
     )
     age = models.IntegerField(
-        verbose_name="Ваш возраст",
+        verbose_name="ваш возраст",
         blank = True, null = True
     )
     balance = models.CharField(

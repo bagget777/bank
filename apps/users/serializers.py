@@ -35,7 +35,7 @@ class RegisterUserSerializer(serializers.ModelSerializer):
         if attrs['password'] != attrs['password2']:
             raise serializers.ValidationError ({'password2': 'Пароли отличаются'})
         if '+996' not in attrs['phone_number']:      
-            raise serializers.ValidationError('Номер телефона должен быть в формате +996*********')
+            raise serializers.ValidationError('Номер телефона должен быть в формате +996XXXXXXXXX')
         return attrs
 
     def create(self, values):

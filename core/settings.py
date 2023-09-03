@@ -23,27 +23,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 load_dotenv()
-SECRET_KEY = os.getenv("SECRET_KEY")
-# SECRET_KEY = 'django-insecure-3wo&_qhp$m5w^@ghpo=st5ku!gq07r!bbx+p(mk9*8mwj#k#)5' Если не работает
+SECRET_KEY = 'django-insecure-2+t-7joe1!+1gz!@(&l%lf01j23kgp&_o%1!)$n7vqzh&m2!xd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
+
     'apps.users',
     'apps.transfer',
-    'jazzmin',
 ]
 
 MIDDLEWARE = [
@@ -110,9 +112,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Bishkek'
 
 USE_I18N = True
 
@@ -128,8 +130,10 @@ STATIC_ROOT = os.path.join(BASE_DIR)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/ 'media'
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users.Username'
+
